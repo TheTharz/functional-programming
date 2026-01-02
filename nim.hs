@@ -14,7 +14,7 @@ valid :: Board -> Int -> Int -> Bool
 valid board row amount = board !! (row - 1) >= amount
 
 move :: Board -> Int -> Int -> Board
-move board row amount = [adjust r n | (r,n) <- zip [1..5] board]
+move board row amount = [adjust r n| (r,n) <- zip [1..5] board]
                         where adjust r n = if r == row then n - amount else n
 
 -- I/O Utilities

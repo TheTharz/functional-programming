@@ -17,7 +17,7 @@ play guessed = do
     putStrLn "Enter a character: "
     c <- getChar
     putStrLn ""
-    play (c : guessed)
+    play (guessed ++ [c])
 
 main :: IO ()
 main = play []
